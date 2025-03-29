@@ -3,8 +3,8 @@ import React from "react";
 const GlobalPress = () => {
     document.title = "Global Press → Future Goals";
     return (
-        <div className="bg-[#1E1E1E] min-h-screen text-[#F1EAE2] pt-28 sm:pt-44 md:pt-44 lg:pt-54 xl:pt-60 pb-[8vw] sm:px-5 md:px-8 lg:px-10 xl:px-10">
-            <h2 className="text-center text-[13vw] leading-[13.5vw] sm:text-[55px] md:text-[60px] lg:text-[90px] xl:text-[115px] font-bold pt-28 font-BriceBold sm:leading-0 uppercase mb-22 sm:mb-32 lg:mb-40">
+        <div className="bg-[#1E1E1E] min-h-screen text-[#F1EAE2] pt-16 sm:pt-44 md:pt-44 lg:pt-54 xl:pt-60 sm:px-5 md:px-8 lg:px-10 xl:px-10 pb-[8vw]">
+            <h2 className="text-center text-[13vw] leading-[13.5vw] sm:text-[55px] md:text-[60px] lg:text-[90px] xl:text-[115px] font-bold pt-28 font-BriceBold sm:leading-0 uppercase mb-12 sm:mb-32 lg:mb-40">
                 Global Press
             </h2>
             <div className="max-w-[1440px] w-full bg-[#F1EAE2] text-[#1E1E1E] font-PoppinsRegular rounded-3xl mx-auto  px-6 sm:px-10 md:px-18 lg:px-24 xl:px-32 pb-18 sm:pb-20 md:pb-24 lg:pb-32 pt-20 sm:pt-28 md:pt-32 lg:pt-44 text-[15px] sm:text-[17px] leading-[25px] sm:leading-[27px]">

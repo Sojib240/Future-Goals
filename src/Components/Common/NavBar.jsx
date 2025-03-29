@@ -134,14 +134,14 @@ const NavBar = ({ menuOpen, setMenuOpen }) => {
         <div className="relative">
             <div className="flex justify-between items-start absolute top-0 left-0 z-50 bg-transparent w-full px-4 sm:px-5 md:px-8 lg:px-10 xl:px-10 pt-5 sm:pt-6 md:pt-8">
                 <div className="w-[75px] hidden sm:flex items-center gap-2 md:gap-3">
-                    <div className="w-[22px] sm:w-[24px] md:w-[26px] lg:w-[28px] xl:w-[30px]">
+                    <div className="w-[22px] sm:w-[24px] md:w-[26px] lg:w-[28px] xl:w-[30px] cursor-pointer">
                         <img
                             className="w-full"
                             src="/Images/Icons/en.svg"
                             alt="logo"
                         />
                     </div>
-                    <div className="w-[22px] sm:w-[24px] md:w-[26px] lg:w-[28px] xl:w-[30px]">
+                    <div className="w-[22px] sm:w-[24px] md:w-[26px] lg:w-[28px] xl:w-[30px] cursor-pointer">
                         <img
                             className="w-full"
                             src="/Images/Icons/pap.svg"

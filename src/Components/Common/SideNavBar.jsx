@@ -41,55 +41,75 @@ const SideNavBar = ({ menuOpen, setMenuOpen }) => {
                             </div>
                         </div>
                         <div className="center pl-0 md:pl-10">
-                            <div className="">
+                            <div className="flex items-center gap-2 group">
                                 <NavLink
                                     to="/"
                                     onClick={() => setMenuOpen(false)}
-                                    className="text-5xl lg:text-6xl xl:text-7xl 2xl:text-[90px] leading-[56px] lg:leading-[70px] xl:leading-[75px] 2xl:leading-[95px] font-BriceBold uppercase nav-link"
+                                    className="text-[45px] lg:text-6xl xl:text-7xl 2xl:text-[90px] leading-[56px] lg:leading-[70px] xl:leading-[75px] 2xl:leading-[95px] font-BriceBold uppercase nav-link"
                                 >
                                     Home
                                 </NavLink>
-                                <span></span>
+                                <NavLink to="/" className="overflow-hidden nav-link hidden sm:block">
+                                    <span className="group-hover:-translate-x-0 -translate-x-full transition-transform duration-[0.4s] origin-left text-[45px] lg:text-6xl xl:text-7xl 2xl:text-[90px] font-BriceBold block leading-none">
+                                        →
+                                    </span>
+                                </NavLink>
                             </div>
-                            <div className="">
+                            <div className="flex items-center gap-2 group">
                                 <NavLink
                                     to="/about/"
                                     onClick={() => setMenuOpen(false)}
-                                    className="text-5xl lg:text-6xl xl:text-7xl 2xl:text-[90px] leading-[56px] lg:leading-[70px] xl:leading-[75px] 2xl:leading-[95px] font-BriceBold uppercase nav-link"
+                                    className="text-[45px] lg:text-6xl xl:text-7xl 2xl:text-[90px] leading-[56px] lg:leading-[70px] xl:leading-[75px] 2xl:leading-[95px] font-BriceBold uppercase nav-link"
                                 >
                                     About
                                 </NavLink>
-                                <span></span>
+                                <NavLink to="/about/" className="overflow-hidden nav-link hidden sm:block">
+                                    <span className="group-hover:-translate-x-0 -translate-x-full transition-transform duration-[0.4s] origin-left text-[45px] lg:text-6xl xl:text-7xl 2xl:text-[90px] font-BriceBold block leading-none">
+                                        →
+                                    </span>
+                                </NavLink>
                             </div>
-                            <div className="">
+                            <div className="flex items-center gap-2 group">
                                 <NavLink
                                     to="/school-portal/"
                                     onClick={() => setMenuOpen(false)}
-                                    className="text-5xl lg:text-6xl xl:text-7xl 2xl:text-[90px] leading-[56px] lg:leading-[70px] xl:leading-[75px] 2xl:leading-[95px] font-BriceBold uppercase nav-link"
+                                    className="text-[45px] lg:text-6xl xl:text-7xl 2xl:text-[90px] leading-[56px] lg:leading-[70px] xl:leading-[75px] 2xl:leading-[95px] font-BriceBold uppercase nav-link"
                                 >
                                     School
                                 </NavLink>
-                                <span></span>
+                                <NavLink to="/school-portal/" className="overflow-hidden nav-link hidden sm:block">
+                                    <span className="group-hover:-translate-x-0 -translate-x-full transition-transform duration-[0.4s] origin-left text-[45px] lg:text-6xl xl:text-7xl 2xl:text-[90px] font-BriceBold block leading-none">
+                                        →
+                                    </span>
+                                </NavLink>
                             </div>
-                            <div className="">
+                            <div className="flex items-center gap-2 group">
                                 <NavLink
                                     to="/news/"
                                     onClick={() => setMenuOpen(false)}
-                                    className="text-5xl lg:text-6xl xl:text-7xl 2xl:text-[90px] leading-[56px] lg:leading-[70px] xl:leading-[75px] 2xl:leading-[95px] font-BriceBold uppercase nav-link"
+                                    className="text-[45px] lg:text-6xl xl:text-7xl 2xl:text-[90px] leading-[56px] lg:leading-[70px] xl:leading-[75px] 2xl:leading-[95px] font-BriceBold uppercase nav-link"
                                 >
                                     News
                                 </NavLink>
-                                <span></span>
+                                <NavLink to="/news/" className="overflow-hidden nav-link hidden sm:block">
+                                    <span className="group-hover:-translate-x-0 -translate-x-full transition-transform duration-[0.4s] origin-left text-[45px] lg:text-6xl xl:text-7xl 2xl:text-[90px] font-BriceBold block nav-link leading-none">
+                                        →
+                                    </span>
+                                </NavLink>
                             </div>
-                            <div className="">
+                            <div className="flex items-center gap-2 group">
                                 <a
                                     href="https://sandalsfoundation.org/donation"
                                     target="_blank"
-                                    className="text-5xl lg:text-6xl xl:text-7xl 2xl:text-[90px] leading-[56px] lg:leading-[70px] xl:leading-[75px] 2xl:leading-[95px] font-BriceBold uppercase"
+                                    className="text-[45px] lg:text-6xl xl:text-7xl 2xl:text-[90px] leading-[56px] lg:leading-[70px] xl:leading-[75px] 2xl:leading-[95px] font-BriceBold uppercase"
                                 >
                                     Donate
                                 </a>
-                                <span></span>
+                                <div className="overflow-hidden hidden sm:block">
+                                    <span className="group-hover:-translate-x-0 -translate-x-full transition-transform duration-[0.4s] origin-left text-[45px] lg:text-6xl xl:text-7xl 2xl:text-[90px] font-BriceBold block leading-none">
+                                        →
+                                    </span>
+                                </div>
                             </div>
                         </div>
                         <div className="bottom flex items-center justify-between gap-2">
@@ -100,7 +120,7 @@ const SideNavBar = ({ menuOpen, setMenuOpen }) => {
                                             to={`${direction}`}
                                             onClick={() => setMenuOpen(false)}
                                             key={id}
-                                            className="rounded-[8px] py-1.5 px-2 font-BriceSemiBold text-xs lg:text-sm uppercase bg-[#FCFCFC] text-[#1E1E1E] border-[#1E1E1E] border-2 relative overflow-hidden cursor-pointer group"
+                                            className="rounded-[8px] py-1.5 px-1 sm:px-2 font-BriceSemiBold text-[10px] sm:text-xs lg:text-sm uppercase bg-[#FCFCFC] text-[#1E1E1E] border-[#1E1E1E] border-2 relative overflow-hidden cursor-pointer group"
                                         >
                                             <span className="group-hover:text-[#FCFCFC] z-20 relative transition-colors duration-300">
                                                 {title}
