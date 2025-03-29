@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import React, { useEffect, useRef, useState } from "react";
-import SideBar from "./sideBar";
 import { NavLink } from "react-router-dom";
+import SideNavBar from "./SideNavBar";
 
 const NavBar = ({ menuOpen, setMenuOpen }) => {
     const hambarger1 = useRef();
@@ -13,10 +13,11 @@ const NavBar = ({ menuOpen, setMenuOpen }) => {
         setmenu((prev) => !prev);
         setMenuOpen((prev) => !prev);
     };
+    // scroll to top when menu is open
 
     useEffect(() => {
         console.log(menu, menuOpen);
-        
+
         const timel = gsap.timeline();
         if (menu && menuOpen) {
             timel.to(
@@ -149,7 +150,10 @@ const NavBar = ({ menuOpen, setMenuOpen }) => {
                     </div>
                 </div>
                 <div className="w-auto sm:w-full flex justify-center">
-                    <NavLink to="/" className="logo w-[100px] sm:w-[140px] md:w-[150px] lg:w-[160px] xl:w-[170px]">
+                    <NavLink
+                        to="/"
+                        className="logo w-[100px] sm:w-[140px] md:w-[150px] lg:w-[160px] xl:w-[170px]"
+                    >
                         <img
                             className="invert w-full"
                             src="/Images/Icons/Main-logo.svg"
@@ -205,7 +209,8 @@ const NavBar = ({ menuOpen, setMenuOpen }) => {
                     </div>
                 </button>
             </div>
-            <SideBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            {/* <SideBa\ */}
+            <SideNavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         </div>
     );
 };
