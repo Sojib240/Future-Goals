@@ -147,11 +147,11 @@ const FAQ = () => {
                 bgColor={"bg-[#00000095]"}
                 margins={"mt-2 lg:mt-5 xl:mt-10"}
                 sizes={
-                    "text-[9.8vw]  sm:text-[8.8vw] md:text-[7.8vw] lg:text-[6.8vw] xl:text-[5.8vw] leading-[9.8vw] sm:leading-[8.8vw] md:leading-[7.8vw] lg:leading-[6.8vw] xl:leading-[5.8vw]"
+                    "text-[#F1EAE2] text-[11.8vw] leading-[8vw] sm:text-[50px] md:text-[60px] lg:text-[78px] xl:text-[88px] 2xl:text-[95px] sm:leading-[120%]"
                 }
                 logo={null}
                 paddings={
-                    "pt-40 sm:pt-44 md:pt-48 lg:pt-54 xl:pt-60 2xl:pt-64 pb-16 sm:pb-12 md:pb-14 lg:pb-16 xl:pb-23 2xl:pb-26"
+                    "pt-44 sm:pt-44 md:pt-50 lg:pt-58 xl:pt-62 2xl:pt-64 pb-16 sm:pb-12 md:pb-14 lg:pb-16 xl:pb-23 2xl:pb-26"
                 }
             />
             <div className="bg-[#F2EBE3] px-4 md:px-8 lg:px-10 xl:px-10 pt-12 sm:pt-16 md:pt-20 pb-24">

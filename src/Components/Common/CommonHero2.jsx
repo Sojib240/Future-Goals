@@ -23,7 +23,7 @@ const CommonHero2 = ({
                     className={`overlay h-full w-full absolute bottom-0 left-0 ${bgColor} pointer-events-none select-none z-10`}
                 />
                 {/* content */}
-                <div className={`flex flex-col gap-4 justify-center items-center ${paddings} text-center relative z-20 px-0 sm:px-5 md:px-8 lg:px-10 xl:px-10`}>
+                <div className={`flex flex-col gap-4 justify-center items-center ${paddings} text-center relative z-20 px-5 md:px-8 lg:px-10 xl:px-10 max-w-[1700px] mx-auto`}>
                     <h4
                         className={`text-[#F1EAE2] ${sizes} font-BriceSemiBold uppercase`}
                     >

@@ -16,8 +16,6 @@ const NavBar = ({ menuOpen, setMenuOpen }) => {
     // scroll to top when menu is open
 
     useEffect(() => {
-        console.log(menu, menuOpen);
-
         const timel = gsap.timeline();
         if (menu && menuOpen) {
             timel.to(

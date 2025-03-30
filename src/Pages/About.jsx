@@ -44,9 +44,13 @@ const About = () => {
                 subtitle={"Edwin van der Sar, CEO Ajax"}
                 bgColor={"bg-[#00000095]"}
                 margins={"mt-2 lg:mt-5 xl:mt-10"}
-                sizes={"text-[7.5vw] leading-[7.5vw] sm:text-[5.8vw] md:text-[5.2vw] lg:text-[4.8vw] xl:text-[3.8vw] sm:leading-[5.8vw] md:leading-[5.2vw] lg:leading-[4.8vw] xl:leading-[3.8vw]"}
+                sizes={
+                    "text-[#F1EAE2] text-[7.8vw] leading-[9.5vw] sm:text-[44px] md:text-[50px] lg:text-[58px] xl:text-[65px] 2xl:text-[70px] sm:leading-[120%]"
+                }
                 logo={true}
-                paddings={'pt-54 sm:pt-54 md:pt-54 lg:pt-54 xl:pt-60 2xl:pt-64 pb-16 sm:pb-12 md:pb-14 lg:pb-16 xl:pb-23 2xl:pb-26'}
+                paddings={
+                    "pt-44 sm:pt-44 md:pt-50 lg:pt-58 xl:pt-62 2xl:pt-64 pb-16 sm:pb-12 md:pb-14 lg:pb-16 xl:pb-23 2xl:pb-26"
+                }
             />
             <div className="bg-[#F1EAE2] px-5 md:px-8 lg:px-10 xl:px-10">
                 <div className="max-w-[1600px] w-full bg-[#F1EAE2] mx-auto pt-16 pb-20 sm:pt-20 sm:pb-28 md:py-24 lg:py-32">

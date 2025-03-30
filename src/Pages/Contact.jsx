@@ -10,7 +10,7 @@ const Contact = () => {
                 subTitle={"Contact"}
             />
             <div className="w-full bg-[#1E1E1E] pb-24 sm:pb-28 md:pb-36 sm:px-5 md:px-8 lg:px-10 xl:px-10">
-                <div className="max-w-[1440px] w-full bg-[#F1EAE2] rounded-3xl mx-auto px-6 sm:px-10 md:px-18 lg:px-24 xl:px-32 py-16 sm:py-20 md:py-24 lg:py-32 text-[15px] sm:text-[17px] text-[#1E1E1E] font-PoppinsRegular  leading-[25px] sm:leading-[27px]">
+                <div className="max-w-[1440px] w-full bg-[#F1EAE2] rounded-3xl mx-auto px-6 sm:px-10 md:px-18 lg:px-24 xl:px-32 py-16 sm:py-20 md:py-24 lg:py-32 text-[15px] sm:text-[17px] text-[#1E1E1E] font-PoppinsRegular -translate-y-0 sm:-translate-y-[100px] leading-[25px] sm:leading-[27px]">
                     <div className="">
                         <p className="font-BriceBold uppercase text-3xl sm:text-4xl lg:text-5xl xl:text-6xl mb-4 text-[#1E1E1E]">
                             Get in touch

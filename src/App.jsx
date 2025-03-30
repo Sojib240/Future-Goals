@@ -15,6 +15,7 @@ import SchoolPortal from "./Pages/SchoolPortal";
 import News from "./Pages/News";
 import Noise from "./Components/Common/Noise";
 import ScrollToTop from "./Components/Common/ScrollToTop";
+import NewsDetails from "./Pages/NewsDetails";
 const App = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     return (
@@ -36,6 +37,7 @@ const App = () => {
                 <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
                 <Route path="/contact/" element={<Contact />} />
                 <Route path="/news/" element={<News />} />
+                <Route path="/news/:slug" element={<NewsDetails />} />
             </Routes>
             <Footer />
         </div>
