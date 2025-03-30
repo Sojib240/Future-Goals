@@ -130,19 +130,19 @@ const Context = (props) => {
                                         at Sandals Foundation.
                                     </p>
                                     <div class="mt-5 sm:mt-6 md:mt-7 lg:mt-8">
-                                        To date,{" "}
+                                        To date,
                                         <span class="font-PoppinsBold">
                                             1,750 kg of plastic
-                                        </span>{" "}
-                                        and{" "}
+                                        </span>
+                                        and
                                         <span class="font-PoppinsBold">
                                             190 m² fishing nets
-                                        </span>{" "}
+                                        </span>
                                         have been pulled from the ocean and
-                                        repurposed into{" "}
+                                        repurposed into
                                         <span class="font-PoppinsBold">
                                             46 football goals
-                                        </span>{" "}
+                                        </span>
                                         and counting. Additionally, 40 classes
                                         totaling 880 children have received
                                         lessons on the importance of ocean
@@ -261,7 +261,7 @@ const Context = (props) => {
     </p>
     <div class="mt-5 sm:mt-6 md:mt-7 lg:mt-8">
         The first Future Goals recipient, Jeanne Hellburg, Head Principal at
-        primary school MGR. Niewindt College, said:{" "}
+        primary school MGR. Niewindt College, said:
         <span class="italic font-PoppinsBold">
             “ Today was really special, a once in a lifetime opportunity for our
             children to engage and play with football players from Ajax. The
