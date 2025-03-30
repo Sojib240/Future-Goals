@@ -58,7 +58,6 @@
 ::selection {
   background-color: #F86125;
   color:#F2EBE3;
-  background-color: #1e1e1e80
 }
 span.swiper-pagination-bullet {
   background: #ffffff !important;
@@ -92,7 +91,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   inset: -200%;
   background-image: url('/Images/noise.png');
   pointer-events: none;
-  opacity: 6%;
+  opacity: 5%;
   animation: shift 0.2s linear infinite both;
 }
 

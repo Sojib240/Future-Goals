@@ -5,6 +5,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 const Footer = () => {
     const centerFooterImgRef = useRef(null);
     const footerBottomRef = useRef(null);
+    
     const { scrollYProgress } = useScroll({
         target: centerFooterImgRef,
         offset: ["start start", "start end"],
@@ -44,7 +45,6 @@ const Footer = () => {
             </div>
             <div className="footer-center bg-[#1E1E1E] text-[#F1EAE2] rounded-b-4xl relative z-30 px-5 md:px-8 lg:px-10 xl:px-10">
                 <div className="max-w-[1600px] w-full mx-auto ">
-                    {/* flex flex-col md:flex-row */}
                     <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 xl:gap-8 translate-y-[-50px] md:translate-y-[-60px] lg:translate-y-[-70px]  xl:translate-y-[-80px]">
                         {pathname === "/contact/" ? null : (
                             <Link
@@ -69,7 +69,7 @@ const Footer = () => {
                                         <span className="ml-1 group-hover:text-[#F1EAE2] z-20 relative transition-colors duration-300 custom-transition">
                                             →
                                         </span>
-                                        <span className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 left-1/2 w-80 sm:w-52 h-80 sm:h-52 lg:w-44 lg:h-44 bg-black scale-0 group-hover:scale-200 lg:group-hover:scale-150 transition-transform duration-[0.44s] ease-in-out rounded-full block z-0" />
+                                        <span className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 left-1/2 w-80 sm:w-52 h-80 sm:h-52 lg:w-44 lg:h-44 bg-[#1E1E1E] scale-0 group-hover:scale-200 lg:group-hover:scale-150 transition-transform duration-[0.44s] ease-in-out rounded-full block z-0" />
                                     </button>
                                 </div>
                                 <div className="rounded-lg overflow-hidden w-full h-full lg:w-[42%]">
@@ -102,7 +102,7 @@ const Footer = () => {
                                     <span className="ml-1 group-hover:text-[#F1EAE2] z-20 relative transition-colors custom-transition">
                                         →
                                     </span>
-                                    <span className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 left-1/2 w-80 sm:w-52 h-80 sm:h-52 lg:w-44 lg:h-44 bg-black scale-0 group-hover:scale-200 lg:group-hover:scale-150 transition-transform duration-[0.44s] ease-in-out rounded-full block z-0" />
+                                    <span className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 left-1/2 w-80 sm:w-52 h-80 sm:h-52 lg:w-44 lg:h-44 bg-[#1E1E1E] scale-0 group-hover:scale-200 lg:group-hover:scale-150 transition-transform duration-[0.44s] ease-in-out rounded-full block z-0" />
                                 </button>
                             </div>
                             <div className="rounded-lg overflow-hidden w-full lg:w-[42%] h-full">

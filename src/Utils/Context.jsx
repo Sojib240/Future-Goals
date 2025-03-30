@@ -230,7 +230,184 @@ const Context = (props) => {
             publishedDate: "19 May — Curacao",
             slug: "interview-with-limpi-recycling",
             image: "/Images/News/news-3-interview-limpi.jpg",
-            pageContent: null,
+            pageContent: `                            <div class="w-full">
+                                <div class="">
+                                    <span class="italic">
+                                        “Let’s create awareness and be creative
+                                        at the same time”
+                                    </span>
+                                    . The first thought of two young
+                                    entrepreneurs - Debrah Nijdam and Mitchell
+                                    Lammering - when they visited the north
+                                    coast of Curaçao and saw the rough waters
+                                    throw plastic that was drifting in the ocean
+                                    onto the shores. Both graduates from the
+                                    study ‘Industrial Product Design’ and with a
+                                    strong shared passion for innovation and
+                                    design. It’s what made them decide to start
+                                    Limpi - a local plastic recycling company
+                                    with the mission to turn unwanted plastic
+                                    into a thing of beauty while simultaneously
+                                    keeping the island of Curaçao clean.
+                                </div>
+
+                                <p class="mt-4 text-xs">
+                                    From fishing nets to football goals
+                                </p>
+                                <div class="mt-8 sm:mt-10 md:mt-18 lg:mt-24">
+                                    <p class="font-PoppinsBold">
+                                        Can you tell us a bit more about Limpi
+                                        and the products that you make?
+                                    </p>
+                                    <p class="">
+                                        Mitchell: Limpi was founded in 2017 and
+                                        we make a large variety of products from
+                                        small to big, We started with keychains
+                                        and coasters, but nowadays we are able
+                                        to make table-tops, trash bins and even
+                                        Future Goals!
+                                    </p>
+                                    <p class="mt-5 sm:mt-6 md:mt-7 lg:mt-8">
+                                        Debrah: Yes, the Future Goals are a
+                                        great example of our custom-made
+                                        products. We love those types of
+                                        projects, because it gives up the
+                                        opportunity to design from scratch and
+                                        since we are still product engineers
+                                        that love a good challenge we were
+                                        really excited when Ajax and Sandals
+                                        Resorts International came with us with
+                                        the idea of the colorful Future Goals.
+                                    </p>
+                                    <div class="w-full overflow-hidden rounded-xl md:rounded-2xl aspect-[3/2] mt-8 sm:mt-10 md:mt-18 lg:mt-24">
+                                        <img
+                                            class="w-full h-full object-cover"
+                                            src="/Images/News/news-1-ajax-and-sandals.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <p class="text-xs mt-4">Future Goals</p>
+
+                                    <p class="mt-8 sm:mt-10 md:mt-18 lg:mt-24 font-PoppinsBold">
+                                        What makes Future Goals special?
+                                    </p>
+                                    <p>
+                                        Mitchell: The Future Goals stand out
+                                        because they are created to make an
+                                        impact. Like all of our products they
+                                        offer a solution to plastic waste and by
+                                        doing so raise awareness as well. We
+                                        show how valuable plastic waste can be
+                                        and in that sense hope to encourage more
+                                        people to recycle.
+                                    </p>
+                                    <p class="mt-5 sm:mt-6 md:mt-7 lg:mt-8">
+                                        Debrah: Besides the recycling aspect
+                                        there is more to Future Goals. Think
+                                        about the positive impact this will have
+                                        on the children and most importantly
+                                        there is no greater feeling than being
+                                        able to give back to your community.
+                                    </p>
+                                    <p class="mt-5 sm:mt-6 md:mt-7 lg:mt-8 font-PoppinsBold">
+                                        That’s how you came across the Sandals
+                                        Foundation right?
+                                    </p>
+                                    <p>
+                                        Debrah: Yes, even before opening their
+                                        new resort here on the island they
+                                        reached out to us. We were already in
+                                        contact with Sandals Resorts about
+                                        selling our recycled souvenirs in their
+                                        resort shop. Based on this relation
+                                        Sandals Foundation, the philanthropic
+                                        arm, decided to help us out. They
+                                        donated multiple much needed machines in
+                                        order to create new types of products
+                                        and make our processes more efficient.
+                                        One of the machines donated is used to
+                                        make the goalposts for the Future Goals.
+                                    </p>
+                                    <p class="mt-8 sm:mt-10 md:mt-18 lg:mt-24 font-BriceBold text-[22px] sm:text-[25px] md:text-[28px] lg:text-[32px] xl:text-[38px] leading-[135%] lg:leading-[125%] uppercase">
+                                        "Sandals Foundation donated multiple
+                                        much needed machines in order to create
+                                        new types of products"
+                                    </p>
+                                    <div class="w-full overflow-hidden rounded-xl md:rounded-2xl aspect-[3/2] mt-8 sm:mt-10 md:mt-18 lg:mt-24 relative group cursor-pointer">
+                                        <img
+                                            class="w-full h-full object-cover"
+                                            src="/Images/sandals-curacao.jpg"
+                                            alt=""
+                                        />
+                                        <div class="overlay h-full w-full absolute bottom-0 left-0 bg-[#1E1E1E40] group-hover:opacity-100 opacity-0 transition-all duration-500"></div>
+                                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-8 h-8 sm:w-12 sm:h-12 md:w-14 md:h-14 xl:w-18 xl:h-18 bg-white rounded-full flex items-center justify-center border-[2px] overflow-hidden">
+                                            <img
+                                                class="z-20 w-2 sm:w-3 md:w-auto relative transition-all duration-300 ease-in-out group-hover:invert"
+                                                src="/Images/Icons/play.svg"
+                                                alt="Play Icon"
+                                            />
+                                            <span class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 left-1/2 w-22 h-22 bg-[#1E1E1E] scale-0 group-hover:scale-125 transition-transform duration-[0.44s] ease-in-out rounded-full block z-0"></span>
+                                        </div>
+                                    </div>
+                                    <p class="mt-8 sm:mt-10 md:mt-18 lg:mt-24 font-PoppinsBold">
+                                        How does it work, manufacturing a Future
+                                        Goal?
+                                    </p>
+                                    <p>
+                                        Mitchell: In order to create one Future
+                                        Goal we need approximately 30 kilos of
+                                        plastic waste. That’s a lot and a great
+                                        motivation, because this plastic would
+                                        have otherwise ended up in the ocean,
+                                        the streets or in the landfill. Plastic
+                                        waste is both collected at home and
+                                        brought to us. There are companies that
+                                        recycle their plastic through us and we
+                                        do beach clean ups as well
+                                    </p>
+                                    <p class="mt-8 sm:mt-10 md:mt-18 lg:mt-24 font-BriceBold text-[22px] sm:text-[25px] md:text-[28px] lg:text-[32px] xl:text-[38px] leading-[135%] lg:leading-[125%] uppercase">
+                                        "In order to create one Future Goal we
+                                        need approximately 30 kilos of plastic
+                                        waste"
+                                    </p>
+                                    <p class="mt-5 sm:mt-6 md:mt-7 lg:mt-8">
+                                        Debrah: In case of the Future Goals -
+                                        besides plastic waste - we work with old
+                                        fishing nets as well. Also known as
+                                        ‘ghost nets’, abandoned nets found in
+                                        the ocean or washed ashore. All the work
+                                        on the goal nets is done manually, we
+                                        clean, repair and cut the nets and we
+                                        secure them with special clips, made
+                                        from recycled old black plastic bottles.
+                                        The beams are made with an extruder
+                                        machine, but not before the plastic is
+                                        thoroughly cleaned, sorted by color and
+                                        finally shredded.
+                                    </p>
+                                    <p class="mt-5 sm:mt-6 md:mt-7 lg:mt-8">
+                                        Mitchell: It’s a lot of work, especially
+                                        because of the color gradient in the
+                                        goal posts. But it’s totally worth it.
+                                        The Future Goals look amazing and at the
+                                        same time they raise awareness,
+                                        contribute to the recycling of plastic
+                                        waste on the island and make sure that
+                                        lots of local children can enjoy the
+                                        game of football!
+                                    </p>
+                                    <div class="mt-5 sm:mt-6 md:mt-7 lg:mt-8">
+                                        More information about Limpi, visit
+                                        <a
+                                            class="underline italic ml-1"
+                                            href="https://limpirecycling.com/"
+                                            target="_blank"
+                                        >
+                                            Limpi Recycling.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>`,
         },
         {
             id: 4,
@@ -240,37 +417,38 @@ const Context = (props) => {
             publishedDate: "19 May — Curacao",
             slug: "mgr-niewindt-college-receives-first-future-goals",
             image: "/Images/News/news-1a.jpg",
-            pageContent: `<div>
-    <p class="">
-        Today was most definitely not an ordinary school day for the children of
-        the MGR. Nieuwindt college in Curaçao. The first school on the island to
-        receive the colorful Future Goals. Handed over by none other than Ajax
-        players themselves. All in the context of Future Goals - a new program -
-        initiated by AFC Ajax and Sandals Resorts International - in order to
-        encourage children to enjoy and play football.
-    </p>
-    <p class="mt-5 sm:mt-6 md:mt-7 lg:mt-8">
-        The Future Goals, creatively made from fishing nets sourced from the
-        ocean and plastic waste, are donated to the school together with a net
-        full of balls. By doing so all children can enjoy and play on a daily
-        basis. For group six in particular, the equipment is accompanied by an
-        8-week sports program designed by Ajax. With a common objective of
-        empowering children through the game of football. The first primary
-        schools will start with the program in September and all primary schools
-        have the opportunity to participate.
-    </p>
-    <div class="mt-5 sm:mt-6 md:mt-7 lg:mt-8">
-        The first Future Goals recipient, Jeanne Hellburg, Head Principal at
-        primary school MGR. Niewindt College, said:
-        <span class="italic font-PoppinsBold">
-            “ Today was really special, a once in a lifetime opportunity for our
-            children to engage and play with football players from Ajax. The
-            game of football is quite popular at our school and I know for sure
-            that we will have lots of fun with the Future Goals and accompanied
-            balls ”
-        </span>
-    </div>
-</div>`,
+            pageContent: `
+            <div>
+            <p class="">
+                Today was most definitely not an ordinary school day for the children of
+                the MGR. Nieuwindt college in Curaçao. The first school on the island to
+                receive the colorful Future Goals. Handed over by none other than Ajax
+                players themselves. All in the context of Future Goals - a new program -
+                initiated by AFC Ajax and Sandals Resorts International - in order to
+                encourage children to enjoy and play football.
+            </p>
+            <p class="mt-5 sm:mt-6 md:mt-7 lg:mt-8">
+                The Future Goals, creatively made from fishing nets sourced from the
+                ocean and plastic waste, are donated to the school together with a net
+                full of balls. By doing so all children can enjoy and play on a daily
+                basis. For group six in particular, the equipment is accompanied by an
+                8-week sports program designed by Ajax. With a common objective of
+                empowering children through the game of football. The first primary
+                schools will start with the program in September and all primary schools
+                have the opportunity to participate.
+            </p>
+            <div class="mt-5 sm:mt-6 md:mt-7 lg:mt-8">
+                The first Future Goals recipient, Jeanne Hellburg, Head Principal at
+                primary school MGR. Niewindt College, said:
+                <span class="italic font-PoppinsBold">
+                    “ Today was really special, a once in a lifetime opportunity for our
+                    children to engage and play with football players from Ajax. The
+                    game of football is quite popular at our school and I know for sure
+                    that we will have lots of fun with the Future Goals and accompanied
+                    balls ”
+                </span>
+            </div>
+            </div>`,
         },
         {
             id: 5,
@@ -280,14 +458,15 @@ const Context = (props) => {
             publishedDate: "19 May — Curacao",
             slug: "ajax-sri-and-its-foundation-sign-partnership",
             image: "/Images/News/news-1-ajax-and-sandals.jpg",
-            pageContent: `<div className="w-full">
-                                <div>
-                                    <p class="font-BriceBold text-[22px] sm:text-[25px] md:text-[28px] lg:text-[32px] xl:text-[38px] leading-[135%] lg:leading-[125%] uppercase">
-                                        From fishing nets to football goals:
-                                        Ajax, Sandals Resorts International and
-                                        its Foundation join forces to facilitate
-                                        youth football in the Caribbean
-                                    </p>
+            pageContent: `
+            <div className="w-full">
+            <div>
+            <p class="font-BriceBold text-[22px] sm:text-[25px] md:text-[28px] lg:text-[32px] xl:text-[38px] leading-[135%] lg:leading-[125%] uppercase">
+            From fishing nets to football goals:
+            Ajax, Sandals Resorts International and
+            its Foundation join forces to facilitate
+            youth football in the Caribbean
+            </p>
                                     <p class="mt-5 sm:mt-6 md:mt-7 lg:mt-8 font-BriceSemiBold text-base sm:text-lg lg:text-xl 2xl:text-2xl leading-[135%] lg:leading-[130%] uppercase">
                                         Inspiring the next generation with life
                                         and football skills, starting in Curaçao
@@ -441,3 +620,22 @@ const Context = (props) => {
 };
 
 export default Context;
+
+// import { useParams, useNavigate } from "react-router-dom";
+
+// const DataDetail = () => {
+//     const { id } = useParams();
+//     const navigate = useNavigate();
+//     const currentIndex = data.findIndex((item) => item.id === Number(id));
+
+//     const nextId = currentIndex < data.length - 1 ? data[currentIndex + 1].id : null;
+//     const prevId = currentIndex > 0 ? data[currentIndex - 1].id : null;
+
+//     return (
+//       <div>
+//         <h2>{data[currentIndex].name}</h2>
+//         <button onClick={() => navigate(`/data/${prevId}`)} disabled={!prevId}>Previous</button>
+//         <button onClick={() => navigate(`/data/${nextId}`)} disabled={!nextId}>Next</button>
+//       </div>
+//     );
+//   };
