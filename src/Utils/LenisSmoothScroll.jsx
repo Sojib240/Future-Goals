@@ -1,10 +1,9 @@
 import Lenis from "lenis";
-import React from "react";
 
 const LenisSmoothScroll = () => {
     // Initialize Lenis
     const lenis = new Lenis({
-        duration: 0.4,
+        duration: 0.3,
     });
 
     // Use requestAnimationFrame to continuously update the scroll

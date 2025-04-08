@@ -1,133 +1,116 @@
 import gsap from "gsap";
 import React, { useEffect, useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useParams } from "react-router-dom";
 import SideNavBar from "./SideNavBar";
 
-const NavBar = ({ menuOpen, setMenuOpen }) => {
+const NavBar = () => {
+    const { pathname } = useLocation();
+
+    const [menuOpen, setMenuOpen] = useState(false);
     const hambarger1 = useRef();
     const hambarger2 = useRef();
     const menuText1Ref = useRef();
     const menuText2Ref = useRef();
+
     const [menu, setmenu] = useState(false);
     const toggleMenu = () => {
-        setmenu((prev) => !prev);
-        setMenuOpen((prev) => !prev);
+        setmenu(!menu);
+        setMenuOpen(!menuOpen);
     };
     // scroll to top when menu is open
-
     useEffect(() => {
         const timel = gsap.timeline();
+
         if (menu && menuOpen) {
-            timel.to(
-                hambarger1.current,
-                {
-                    top: "50%",
-                    duration: 0.15,
-                    ease: "sine.out",
-                },
-                "a"
-            );
-            timel.to(
-                hambarger2.current,
-                {
-                    top: "50%",
-                    duration: 0.15,
-                    ease: "sine.out",
-                },
-                "a"
-            );
-            timel.to(
-                hambarger1.current,
-                {
-                    delay: 0.1,
-                    rotate: "45deg",
-                    duration: 0.15,
-                    ease: "sine.out",
-                },
-                "b"
-            );
-            timel.to(
-                hambarger2.current,
-                {
-                    delay: 0.1,
-                    rotate: "-45deg",
-                    duration: 0.15,
-                    ease: "sine.out",
-                },
-                "b"
-            );
-            timel.to(
-                menuText1Ref.current,
-                {
-                    y: "-20px",
-                    duration: 0.2,
-                    ease: "sine.out",
-                },
-                "b"
-            );
-            timel.to(
-                menuText2Ref.current,
-                {
-                    y: "-20px",
-                    duration: 0.2,
-                    ease: "sine.out",
-                },
-                "b"
-            );
+            timel
+                .to(
+                    hambarger1.current,
+                    { top: "50%", duration: 0.15, ease: "sine.out" },
+                    "a"
+                )
+                .to(
+                    hambarger2.current,
+                    { top: "50%", duration: 0.15, ease: "sine.out" },
+                    "a"
+                )
+                .to(
+                    hambarger1.current,
+                    {
+                        delay: 0.1,
+                        rotate: "45deg",
+                        duration: 0.15,
+                        ease: "sine.out",
+                    },
+                    "b"
+                )
+                .to(
+                    hambarger2.current,
+                    {
+                        delay: 0.1,
+                        rotate: "-45deg",
+                        duration: 0.15,
+                        ease: "sine.out",
+                    },
+                    "b"
+                )
+                .to(
+                    menuText1Ref.current,
+                    { y: "-20px", duration: 0.2, ease: "sine.out" },
+                    "b"
+                )
+                .to(
+                    menuText2Ref.current,
+                    { y: "-20px", duration: 0.2, ease: "sine.out" },
+                    "b"
+                );
         } else {
-            timel.to(
-                hambarger1.current,
-                {
-                    rotate: "0deg",
-                    duration: 0.15,
-                    ease: "sine.out",
-                },
-                "a"
-            );
-            timel.to(
-                hambarger2.current,
-                {
-                    rotate: "0deg",
-                    duration: 0.15,
-                    ease: "sine.out",
-                },
-                "a"
-            );
-            timel.to(
-                hambarger1.current,
-                { delay: 0.1, top: "0%", duration: 0.15, ease: "power1.inOut" },
-                "b"
-            );
-            timel.to(
-                hambarger2.current,
-                {
-                    delay: 0.1,
-                    top: "100%",
-                    duration: 0.15,
-                    ease: "sine.out",
-                },
-                "b"
-            );
-            timel.to(
-                menuText1Ref.current,
-                {
-                    y: "0px",
-                    duration: 0.2,
-                    ease: "sine.out",
-                },
-                "b"
-            );
-            timel.to(
-                menuText2Ref.current,
-                {
-                    y: "0px",
-                    duration: 0.2,
-                    ease: "sine.out",
-                },
-                "b"
-            );
+            timel
+                .to(
+                    hambarger1.current,
+                    { rotate: "0deg", duration: 0.15, ease: "sine.out" },
+                    "a"
+                )
+                .to(
+                    hambarger2.current,
+                    { rotate: "0deg", duration: 0.15, ease: "sine.out" },
+                    "a"
+                )
+                .to(
+                    hambarger1.current,
+                    {
+                        delay: 0.1,
+                        top: "0%",
+                        duration: 0.15,
+                        ease: "power1.inOut",
+                    },
+                    "b"
+                )
+                .to(
+                    hambarger2.current,
+                    {
+                        delay: 0.1,
+                        top: "100%",
+                        duration: 0.15,
+                        ease: "sine.out",
+                    },
+                    "b"
+                )
+                .to(
+                    menuText1Ref.current,
+                    { y: "0px", duration: 0.2, ease: "sine.out" },
+                    "b"
+                )
+                .to(
+                    menuText2Ref.current,
+                    { y: "0px", duration: 0.2, ease: "sine.out" },
+                    "b"
+                );
         }
-    }, [menu, menuOpen]);
+        return () => {
+            timel.kill();
+        };
+    }, [menu, menuOpen, pathname]);
+
     return (
         <div className="relative">
             <div className="flex justify-between items-start absolute top-0 left-0 z-50 bg-transparent w-full px-4 sm:px-5 md:px-8 lg:px-10 xl:px-10 pt-5 sm:pt-6 md:pt-8">
@@ -208,7 +191,11 @@ const NavBar = ({ menuOpen, setMenuOpen }) => {
                 </button>
             </div>
             {/* <SideBa\ */}
-            <SideNavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            <SideNavBar
+                menuOpen={menuOpen}
+                setMenuOpen={setMenuOpen}
+                toggleMenu={toggleMenu}
+            />
         </div>
     );
 };

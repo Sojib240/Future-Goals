@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
-const SideNavBar = ({ menuOpen, setMenuOpen }) => {
+const SideNavBar = ({ menuOpen, setMenuOpen,toggleMenu }) => {
     const sideBarData = [
         { id: 1, title: "FAQ", direction: "/faq/" },
         { id: 2, title: "Contact", direction: "/contact/" },
@@ -17,9 +17,9 @@ const SideNavBar = ({ menuOpen, setMenuOpen }) => {
                     }`}
                 />
                 <div
-                    className={`menu fixed top-0 right-0 z-50 bg-[#F1EAE2] max-w-[94%] sm:max-w-[550px] lg:max-w-[580px] xl:max-w-[680px] 2xl:max-w-[800px] rounded-l-[30px] lg:rounded-l-[40px] xl:rounded-l-[60px] w-full h-screen p-10 sm:p-12 lg:p-14 xl:p-14 ${
+                    className={`menu fixed top-0 right-0 z-50 bg-[#F1EAE2] max-w-[94%] sm:max-w-[550px] lg:max-w-[580px] xl:max-w-[680px] 2xl:max-w-[800px] rounded-l-[30px] lg:rounded-l-[40px] xl:rounded-l-[60px] w-full h-screen p-10 sm:p-12 lg:p-14 xl:p-14  ${
                         menuOpen ? "translate-x-0" : "translate-x-full"
-                    } custom-transition`}
+                    }  custom-transition`}
                 >
                     <div className="flex justify-between flex-col gap-10 h-full">
                         <div className="top">

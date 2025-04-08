@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CommonHero2 from "../Components/Common/CommonHero2";
+import PageAnimation from "../Components/PageAnimation";
 
 const FAQ = () => {
     document.title = "FAQ → Future Goals";
@@ -139,275 +140,289 @@ const FAQ = () => {
     };
 
     return (
-        <div className="">
-            <CommonHero2
-                title="FAQ"
-                backgroundImage={"/Images/News/news-1c.jpg"}
-                subtitle={"Check our frequently asked questions below."}
-                bgColor={"bg-[#00000095]"}
-                margins={"mt-2 lg:mt-5 xl:mt-10"}
-                sizes={
-                    "text-[#F1EAE2] text-[11.8vw] leading-[8vw] sm:text-[50px] md:text-[60px] lg:text-[78px] xl:text-[88px] 2xl:text-[95px] sm:leading-[120%]"
-                }
-                logo={null}
-                paddings={
-                    "pt-44 sm:pt-44 md:pt-50 lg:pt-58 xl:pt-62 2xl:pt-64 pb-16 sm:pb-12 md:pb-14 lg:pb-16 xl:pb-23 2xl:pb-26"
-                }
-            />
-            <div className="bg-[#F2EBE3] px-4 md:px-8 lg:px-10 xl:px-10 pt-12 sm:pt-16 md:pt-20 pb-24">
-                <div className="max-w-[1600px] w-full mx-auto">
-                    <div className="first-section">
-                        <h4 className="font-BriceSemiBold text-base sm:text-xl lg:text-2xl xl:text-[28px] mb-6 text-center uppercase">
-                            Overall
-                        </h4>
-                        <div className="flex flex-col md:flex-row gap-5 md:gap-8">
-                            <div className="w-full md:w-1/2 flex flex-col gap-5 md:gap-8">
-                                {FaqData.slice(0, 2).map((item) => (
-                                    <div
-                                        key={item.id}
-                                        className="rounded-3xl bg-[#FCFCFC] px-5 sm:px-6 xl:px-8 pt-5 sm:pt-6 xl:pt-8 overflow-hidden"
-                                    >
-                                        <button
-                                            onClick={() =>
-                                                handleAccordian(item.id)
-                                            }
-                                            className="w-full mb-3 lg:mb-5 cursor-pointer text-left"
-                                        >
-                                            <div
-                                                className="font-BriceBold text-[20px] md:text-[24px] lg:text-[28px] xl:text-[26px] 2xl:text-[33px] leading-[23px] sm:leading-[27px] md:leading-[27px] lg:leading-[31px] xl:leading-[29px] 2xl:leading-[36px] uppercase"
-                                                dangerouslySetInnerHTML={{
-                                                    __html: item.question,
-                                                }}
-                                            />
-                                        </button>
+        <PageAnimation>
+            <div className="">
+                <CommonHero2
+                    title="FAQ"
+                    backgroundImage={"/Images/News/news-1c.jpg"}
+                    subtitle={"Check our frequently asked questions below."}
+                    bgColor={"bg-[#00000095]"}
+                    margins={"mt-2 lg:mt-5 xl:mt-10"}
+                    sizes={
+                        "text-[#F1EAE2] text-[11.8vw] leading-[8vw] sm:text-[50px] md:text-[60px] lg:text-[78px] xl:text-[88px] 2xl:text-[95px] sm:leading-[120%]"
+                    }
+                    logo={null}
+                    paddings={
+                        "pt-44 sm:pt-44 md:pt-50 lg:pt-58 xl:pt-62 2xl:pt-64 pb-16 sm:pb-12 md:pb-14 lg:pb-16 xl:pb-23 2xl:pb-26"
+                    }
+                />
+                <div className="bg-[#F2EBE3] px-4 md:px-8 lg:px-10 xl:px-10 pt-12 sm:pt-16 md:pt-20 pb-24">
+                    <div className="max-w-[1600px] w-full mx-auto">
+                        <div className="first-section">
+                            <h4 className="font-BriceSemiBold text-base sm:text-xl lg:text-2xl xl:text-[28px] mb-6 text-center uppercase">
+                                Overall
+                            </h4>
+                            <div className="flex flex-col md:flex-row gap-5 md:gap-8">
+                                <div className="w-full md:w-1/2 flex flex-col gap-5 md:gap-8">
+                                    {FaqData.slice(0, 2).map((item) => (
                                         <div
-                                            className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
-                                                accordianOpen.includes(item.id)
-                                                    ? "grid-rows-[1fr]"
-                                                    : "grid-rows-[0fr]"
-                                            }`}
+                                            key={item.id}
+                                            className="rounded-3xl bg-[#FCFCFC] px-5 sm:px-6 xl:px-8 pt-5 sm:pt-6 xl:pt-8 overflow-hidden"
                                         >
-                                            <div className="overflow-hidden font-font3 text-sm sm:text-base leading-[25px]">
+                                            <button
+                                                onClick={() =>
+                                                    handleAccordian(item.id)
+                                                }
+                                                className="w-full mb-3 lg:mb-5 cursor-pointer text-left"
+                                            >
                                                 <div
-                                                    className="pb-5 sm:pb-6 xl:pb-8 font-PoppinsRegular text-sm xl:text-[15px] 2xl:text-base leading-[23px] sm:leading-[25px] 2xl:leading-[27px] flex flex-col gap-3 md:gap-5"
+                                                    className="font-BriceBold text-[20px] md:text-[24px] lg:text-[28px] xl:text-[26px] 2xl:text-[33px] leading-[23px] sm:leading-[27px] md:leading-[27px] lg:leading-[31px] xl:leading-[29px] 2xl:leading-[36px] uppercase"
                                                     dangerouslySetInnerHTML={{
-                                                        __html: item.answer,
+                                                        __html: item.question,
                                                     }}
                                                 />
+                                            </button>
+                                            <div
+                                                className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
+                                                    accordianOpen.includes(
+                                                        item.id
+                                                    )
+                                                        ? "grid-rows-[1fr]"
+                                                        : "grid-rows-[0fr]"
+                                                }`}
+                                            >
+                                                <div className="overflow-hidden font-font3 text-sm sm:text-base leading-[25px]">
+                                                    <div
+                                                        className="pb-5 sm:pb-6 xl:pb-8 font-PoppinsRegular text-sm xl:text-[15px] 2xl:text-base leading-[23px] sm:leading-[25px] 2xl:leading-[27px] flex flex-col gap-3 md:gap-5"
+                                                        dangerouslySetInnerHTML={{
+                                                            __html: item.answer,
+                                                        }}
+                                                    />
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                ))}
-                            </div>
-                            <div className="w-full md:w-1/2 flex flex-col gap-5 md:gap-8">
-                                {FaqData.slice(2, 4).map((item) => (
-                                    <div
-                                        key={item.id}
-                                        className="rounded-3xl bg-[#FCFCFC] px-5 sm:px-6 xl:px-8 pt-5 sm:pt-6 xl:pt-8 overflow-hidden"
-                                    >
-                                        <button
-                                            onClick={() =>
-                                                handleAccordian(item.id)
-                                            }
-                                            className="w-full mb-3 lg:mb-5 cursor-pointer text-left"
-                                        >
-                                            <div
-                                                className="font-BriceBold text-[20px] md:text-[24px] lg:text-[28px] xl:text-[26px] 2xl:text-[33px] leading-[23px] sm:leading-[27px] md:leading-[27px] lg:leading-[31px] xl:leading-[29px] 2xl:leading-[36px] uppercase"
-                                                dangerouslySetInnerHTML={{
-                                                    __html: item.question,
-                                                }}
-                                            />
-                                        </button>
+                                    ))}
+                                </div>
+                                <div className="w-full md:w-1/2 flex flex-col gap-5 md:gap-8">
+                                    {FaqData.slice(2, 4).map((item) => (
                                         <div
-                                            className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
-                                                accordianOpen.includes(item.id)
-                                                    ? "grid-rows-[1fr]"
-                                                    : "grid-rows-[0fr]"
-                                            }`}
+                                            key={item.id}
+                                            className="rounded-3xl bg-[#FCFCFC] px-5 sm:px-6 xl:px-8 pt-5 sm:pt-6 xl:pt-8 overflow-hidden"
                                         >
-                                            <div className="overflow-hidden font-font3 text-sm sm:text-base leading-[25px]">
+                                            <button
+                                                onClick={() =>
+                                                    handleAccordian(item.id)
+                                                }
+                                                className="w-full mb-3 lg:mb-5 cursor-pointer text-left"
+                                            >
                                                 <div
-                                                    className="pb-5 sm:pb-6 xl:pb-8 font-PoppinsRegular text-sm xl:text-[15px] 2xl:text-base leading-[23px] sm:leading-[25px] 2xl:leading-[27px] flex flex-col gap-3 md:gap-5"
+                                                    className="font-BriceBold text-[20px] md:text-[24px] lg:text-[28px] xl:text-[26px] 2xl:text-[33px] leading-[23px] sm:leading-[27px] md:leading-[27px] lg:leading-[31px] xl:leading-[29px] 2xl:leading-[36px] uppercase"
                                                     dangerouslySetInnerHTML={{
-                                                        __html: item.answer,
+                                                        __html: item.question,
                                                     }}
                                                 />
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="second-section mt-12 md:mt-20">
-                        <h4 className="font-BriceSemiBold text-base sm:text-xl lg:text-2xl xl:text-[28px] mb-6 text-center uppercase">
-                            Future Goals
-                        </h4>
-                        <div className="flex flex-col md:flex-row gap-5 md:gap-8">
-                            <div className="w-full md:w-1/2 flex flex-col gap-8">
-                                {FaqData.slice(4, 5).map((item) => (
-                                    <div
-                                        key={item.id}
-                                        className="rounded-3xl bg-[#FCFCFC] px-5 sm:px-6 xl:px-8 pt-5 sm:pt-6 xl:pt-8 overflow-hidden"
-                                    >
-                                        <button
-                                            onClick={() =>
-                                                handleAccordian(item.id)
-                                            }
-                                            className="w-full mb-3 lg:mb-5 cursor-pointer text-left"
-                                        >
+                                            </button>
                                             <div
-                                                className="font-BriceBold text-[20px] md:text-[24px] lg:text-[28px] xl:text-[26px] 2xl:text-[33px] leading-[23px] sm:leading-[27px] md:leading-[27px] lg:leading-[31px] xl:leading-[29px] 2xl:leading-[36px] uppercase"
-                                                dangerouslySetInnerHTML={{
-                                                    __html: item.question,
-                                                }}
-                                            />
-                                        </button>
-                                        <div
-                                            className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
-                                                accordianOpen.includes(item.id)
-                                                    ? "grid-rows-[1fr]"
-                                                    : "grid-rows-[0fr]"
-                                            }`}
-                                        >
-                                            <div className="overflow-hidden font-font3 text-sm sm:text-base leading-[25px]">
-                                                <div
-                                                    className="pb-5 sm:pb-6 xl:pb-8 font-PoppinsRegular text-sm xl:text-[15px] 2xl:text-base leading-[23px] sm:leading-[25px] 2xl:leading-[27px] flex flex-col gap-3 md:gap-5"
-                                                    dangerouslySetInnerHTML={{
-                                                        __html: item.answer,
-                                                    }}
-                                                />
+                                                className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
+                                                    accordianOpen.includes(
+                                                        item.id
+                                                    )
+                                                        ? "grid-rows-[1fr]"
+                                                        : "grid-rows-[0fr]"
+                                                }`}
+                                            >
+                                                <div className="overflow-hidden font-font3 text-sm sm:text-base leading-[25px]">
+                                                    <div
+                                                        className="pb-5 sm:pb-6 xl:pb-8 font-PoppinsRegular text-sm xl:text-[15px] 2xl:text-base leading-[23px] sm:leading-[25px] 2xl:leading-[27px] flex flex-col gap-3 md:gap-5"
+                                                        dangerouslySetInnerHTML={{
+                                                            __html: item.answer,
+                                                        }}
+                                                    />
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                ))}
-                            </div>
-                            <div className="w-full md:w-1/2 flex flex-col gap-8">
-                                {FaqData.slice(5, 6).map((item) => (
-                                    <div
-                                        key={item.id}
-                                        className="rounded-3xl bg-[#FCFCFC] px-5 sm:px-6 xl:px-8 pt-5 sm:pt-6 xl:pt-8 overflow-hidden"
-                                    >
-                                        <button
-                                            onClick={() =>
-                                                handleAccordian(item.id)
-                                            }
-                                            className="w-full mb-3 lg:mb-5 cursor-pointer text-left"
-                                        >
-                                            <div
-                                                className="font-BriceBold text-[20px] md:text-[24px] lg:text-[28px] xl:text-[26px] 2xl:text-[33px] leading-[23px] sm:leading-[27px] md:leading-[27px] lg:leading-[31px] xl:leading-[29px] 2xl:leading-[36px] uppercase"
-                                                dangerouslySetInnerHTML={{
-                                                    __html: item.question,
-                                                }}
-                                            />
-                                        </button>
-                                        <div
-                                            className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
-                                                accordianOpen.includes(item.id)
-                                                    ? "grid-rows-[1fr]"
-                                                    : "grid-rows-[0fr]"
-                                            }`}
-                                        >
-                                            <div className="overflow-hidden font-font3 text-sm sm:text-base leading-[25px]">
-                                                <div
-                                                    className="pb-5 sm:pb-6 xl:pb-8 font-PoppinsRegular text-sm xl:text-[15px] 2xl:text-base leading-[23px] sm:leading-[25px] 2xl:leading-[27px] flex flex-col gap-3 md:gap-5"
-                                                    dangerouslySetInnerHTML={{
-                                                        __html: item.answer,
-                                                    }}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="third-section mt-12 md:mt-20">
-                        <h4 className="font-BriceSemiBold text-base sm:text-xl lg:text-2xl xl:text-[28px] mb-6 text-center uppercase">
-                            Future Goals Program
-                        </h4>
-                        <div className="flex flex-col md:flex-row gap-5 md:gap-8">
-                            <div className="w-full md:w-1/2 flex flex-col gap-5 md:gap-8">
-                                {FaqData.slice(6, 10).map((item) => (
-                                    <div
-                                        key={item.id}
-                                        className="rounded-3xl bg-[#FCFCFC] px-5 sm:px-6 xl:px-8 pt-5 sm:pt-6 xl:pt-8 overflow-hidden"
-                                    >
-                                        <button
-                                            onClick={() =>
-                                                handleAccordian(item.id)
-                                            }
-                                            className="w-full mb-3 lg:mb-5 cursor-pointer text-left"
-                                        >
-                                            <div
-                                                className="font-BriceBold text-[20px] md:text-[24px] lg:text-[28px] xl:text-[26px] 2xl:text-[33px] leading-[23px] sm:leading-[27px] md:leading-[27px] lg:leading-[31px] xl:leading-[29px] 2xl:leading-[36px] uppercase"
-                                                dangerouslySetInnerHTML={{
-                                                    __html: item.question,
-                                                }}
-                                            />
-                                        </button>
+                        <div className="second-section mt-12 md:mt-20">
+                            <h4 className="font-BriceSemiBold text-base sm:text-xl lg:text-2xl xl:text-[28px] mb-6 text-center uppercase">
+                                Future Goals
+                            </h4>
+                            <div className="flex flex-col md:flex-row gap-5 md:gap-8">
+                                <div className="w-full md:w-1/2 flex flex-col gap-8">
+                                    {FaqData.slice(4, 5).map((item) => (
                                         <div
-                                            className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
-                                                accordianOpen.includes(item.id)
-                                                    ? "grid-rows-[1fr]"
-                                                    : "grid-rows-[0fr]"
-                                            }`}
+                                            key={item.id}
+                                            className="rounded-3xl bg-[#FCFCFC] px-5 sm:px-6 xl:px-8 pt-5 sm:pt-6 xl:pt-8 overflow-hidden"
                                         >
-                                            <div className="overflow-hidden font-font3 text-sm sm:text-base leading-[25px]">
+                                            <button
+                                                onClick={() =>
+                                                    handleAccordian(item.id)
+                                                }
+                                                className="w-full mb-3 lg:mb-5 cursor-pointer text-left"
+                                            >
                                                 <div
-                                                    className="pb-5 sm:pb-6 xl:pb-8 font-PoppinsRegular text-sm xl:text-[15px] 2xl:text-base leading-[23px] sm:leading-[25px] 2xl:leading-[27px] flex flex-col gap-3 md:gap-5"
+                                                    className="font-BriceBold text-[20px] md:text-[24px] lg:text-[28px] xl:text-[26px] 2xl:text-[33px] leading-[23px] sm:leading-[27px] md:leading-[27px] lg:leading-[31px] xl:leading-[29px] 2xl:leading-[36px] uppercase"
                                                     dangerouslySetInnerHTML={{
-                                                        __html: item.answer,
+                                                        __html: item.question,
                                                     }}
                                                 />
+                                            </button>
+                                            <div
+                                                className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
+                                                    accordianOpen.includes(
+                                                        item.id
+                                                    )
+                                                        ? "grid-rows-[1fr]"
+                                                        : "grid-rows-[0fr]"
+                                                }`}
+                                            >
+                                                <div className="overflow-hidden font-font3 text-sm sm:text-base leading-[25px]">
+                                                    <div
+                                                        className="pb-5 sm:pb-6 xl:pb-8 font-PoppinsRegular text-sm xl:text-[15px] 2xl:text-base leading-[23px] sm:leading-[25px] 2xl:leading-[27px] flex flex-col gap-3 md:gap-5"
+                                                        dangerouslySetInnerHTML={{
+                                                            __html: item.answer,
+                                                        }}
+                                                    />
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                ))}
+                                    ))}
+                                </div>
+                                <div className="w-full md:w-1/2 flex flex-col gap-8">
+                                    {FaqData.slice(5, 6).map((item) => (
+                                        <div
+                                            key={item.id}
+                                            className="rounded-3xl bg-[#FCFCFC] px-5 sm:px-6 xl:px-8 pt-5 sm:pt-6 xl:pt-8 overflow-hidden"
+                                        >
+                                            <button
+                                                onClick={() =>
+                                                    handleAccordian(item.id)
+                                                }
+                                                className="w-full mb-3 lg:mb-5 cursor-pointer text-left"
+                                            >
+                                                <div
+                                                    className="font-BriceBold text-[20px] md:text-[24px] lg:text-[28px] xl:text-[26px] 2xl:text-[33px] leading-[23px] sm:leading-[27px] md:leading-[27px] lg:leading-[31px] xl:leading-[29px] 2xl:leading-[36px] uppercase"
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: item.question,
+                                                    }}
+                                                />
+                                            </button>
+                                            <div
+                                                className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
+                                                    accordianOpen.includes(
+                                                        item.id
+                                                    )
+                                                        ? "grid-rows-[1fr]"
+                                                        : "grid-rows-[0fr]"
+                                                }`}
+                                            >
+                                                <div className="overflow-hidden font-font3 text-sm sm:text-base leading-[25px]">
+                                                    <div
+                                                        className="pb-5 sm:pb-6 xl:pb-8 font-PoppinsRegular text-sm xl:text-[15px] 2xl:text-base leading-[23px] sm:leading-[25px] 2xl:leading-[27px] flex flex-col gap-3 md:gap-5"
+                                                        dangerouslySetInnerHTML={{
+                                                            __html: item.answer,
+                                                        }}
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                            <div className="w-full md:w-1/2 flex flex-col gap-5 md:gap-8">
-                                {FaqData.slice(10, 13).map((item) => (
-                                    <div
-                                        key={item.id}
-                                        className="rounded-3xl bg-[#FCFCFC] px-5 sm:px-6 xl:px-8 pt-5 sm:pt-6 xl:pt-8 overflow-hidden"
-                                    >
-                                        <button
-                                            onClick={() =>
-                                                handleAccordian(item.id)
-                                            }
-                                            className="w-full mb-3 lg:mb-5 cursor-pointer text-left"
-                                        >
-                                            <div
-                                                className="font-BriceBold text-[20px] md:text-[24px] lg:text-[28px] xl:text-[26px] 2xl:text-[33px] leading-[23px] sm:leading-[27px] md:leading-[27px] lg:leading-[31px] xl:leading-[29px] 2xl:leading-[36px] uppercase"
-                                                dangerouslySetInnerHTML={{
-                                                    __html: item.question,
-                                                }}
-                                            />
-                                        </button>
+                        </div>
+                        <div className="third-section mt-12 md:mt-20">
+                            <h4 className="font-BriceSemiBold text-base sm:text-xl lg:text-2xl xl:text-[28px] mb-6 text-center uppercase">
+                                Future Goals Program
+                            </h4>
+                            <div className="flex flex-col md:flex-row gap-5 md:gap-8">
+                                <div className="w-full md:w-1/2 flex flex-col gap-5 md:gap-8">
+                                    {FaqData.slice(6, 10).map((item) => (
                                         <div
-                                            className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
-                                                accordianOpen.includes(item.id)
-                                                    ? "grid-rows-[1fr]"
-                                                    : "grid-rows-[0fr]"
-                                            }`}
+                                            key={item.id}
+                                            className="rounded-3xl bg-[#FCFCFC] px-5 sm:px-6 xl:px-8 pt-5 sm:pt-6 xl:pt-8 overflow-hidden"
                                         >
-                                            <div className="overflow-hidden font-font3 text-sm sm:text-base leading-[25px]">
+                                            <button
+                                                onClick={() =>
+                                                    handleAccordian(item.id)
+                                                }
+                                                className="w-full mb-3 lg:mb-5 cursor-pointer text-left"
+                                            >
                                                 <div
-                                                    className="pb-5 sm:pb-6 xl:pb-8 font-PoppinsRegular text-sm xl:text-[15px] 2xl:text-base leading-[23px] sm:leading-[25px] 2xl:leading-[27px] flex flex-col gap-3 md:gap-5"
+                                                    className="font-BriceBold text-[20px] md:text-[24px] lg:text-[28px] xl:text-[26px] 2xl:text-[33px] leading-[23px] sm:leading-[27px] md:leading-[27px] lg:leading-[31px] xl:leading-[29px] 2xl:leading-[36px] uppercase"
                                                     dangerouslySetInnerHTML={{
-                                                        __html: item.answer,
+                                                        __html: item.question,
                                                     }}
                                                 />
+                                            </button>
+                                            <div
+                                                className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
+                                                    accordianOpen.includes(
+                                                        item.id
+                                                    )
+                                                        ? "grid-rows-[1fr]"
+                                                        : "grid-rows-[0fr]"
+                                                }`}
+                                            >
+                                                <div className="overflow-hidden font-font3 text-sm sm:text-base leading-[25px]">
+                                                    <div
+                                                        className="pb-5 sm:pb-6 xl:pb-8 font-PoppinsRegular text-sm xl:text-[15px] 2xl:text-base leading-[23px] sm:leading-[25px] 2xl:leading-[27px] flex flex-col gap-3 md:gap-5"
+                                                        dangerouslySetInnerHTML={{
+                                                            __html: item.answer,
+                                                        }}
+                                                    />
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                ))}
+                                    ))}
+                                </div>
+                                <div className="w-full md:w-1/2 flex flex-col gap-5 md:gap-8">
+                                    {FaqData.slice(10, 13).map((item) => (
+                                        <div
+                                            key={item.id}
+                                            className="rounded-3xl bg-[#FCFCFC] px-5 sm:px-6 xl:px-8 pt-5 sm:pt-6 xl:pt-8 overflow-hidden"
+                                        >
+                                            <button
+                                                onClick={() =>
+                                                    handleAccordian(item.id)
+                                                }
+                                                className="w-full mb-3 lg:mb-5 cursor-pointer text-left"
+                                            >
+                                                <div
+                                                    className="font-BriceBold text-[20px] md:text-[24px] lg:text-[28px] xl:text-[26px] 2xl:text-[33px] leading-[23px] sm:leading-[27px] md:leading-[27px] lg:leading-[31px] xl:leading-[29px] 2xl:leading-[36px] uppercase"
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: item.question,
+                                                    }}
+                                                />
+                                            </button>
+                                            <div
+                                                className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
+                                                    accordianOpen.includes(
+                                                        item.id
+                                                    )
+                                                        ? "grid-rows-[1fr]"
+                                                        : "grid-rows-[0fr]"
+                                                }`}
+                                            >
+                                                <div className="overflow-hidden font-font3 text-sm sm:text-base leading-[25px]">
+                                                    <div
+                                                        className="pb-5 sm:pb-6 xl:pb-8 font-PoppinsRegular text-sm xl:text-[15px] 2xl:text-base leading-[23px] sm:leading-[25px] 2xl:leading-[27px] flex flex-col gap-3 md:gap-5"
+                                                        dangerouslySetInnerHTML={{
+                                                            __html: item.answer,
+                                                        }}
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </PageAnimation>
     );
 };
 

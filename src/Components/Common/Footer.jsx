@@ -8,14 +8,14 @@ const Footer = () => {
     
     const { scrollYProgress } = useScroll({
         target: centerFooterImgRef,
-        offset: ["start start", "start end"],
+        offset: ["start end", "end end"],
     });
-    // const { scrollYProgress: scrollYProgress2 } = useScroll({
-    //     target: footerBottomRef,
-    //     offset: ["start start", "end end"],
-    // });
-    const y = useTransform(scrollYProgress, [0, 0.8], ["0px", "-50px"]);
-    // const y2 = useTransform(scrollYProgress2, [0, 1], ["-100px", "0px"]);
+    const { scrollYProgress: scrollYProgress2 } = useScroll({
+        target: footerBottomRef,
+        offset: ["start end", "end end"],
+    });
+    const y = useTransform(scrollYProgress, [0, 0.8], ["-50px", "0px"]);
+    const y2 = useTransform(scrollYProgress2, [0, 1], ["-100px", "0px"]);
     const { pathname } = useLocation();
     return (
         <div className="bg-[#F1EAE2]">
@@ -44,7 +44,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-center bg-[#1E1E1E] text-[#F1EAE2] rounded-b-4xl relative z-30 px-5 md:px-8 lg:px-10 xl:px-10">
-                <div className="max-w-[1600px] w-full mx-auto ">
+                <div className="max-w-[1600px] w-full mx-auto">
                     <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 xl:gap-8 translate-y-[-50px] md:translate-y-[-60px] lg:translate-y-[-70px]  xl:translate-y-[-80px]">
                         {pathname === "/contact/" ? null : (
                             <Link
@@ -135,9 +135,9 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div
-                // ref={footerBottomRef} style={{ y2 }}
-                className="footer-bottom pb-8 pt-9 sm:py-10 md:py-12 lg:py-14 xl:py-16 bg-[#F1EAE2] px-4 sm:px-5 md:px-8 lg:px-10 xl:px-10"
+            <motion.div
+                ref={footerBottomRef} style={{ y:y2 }}
+                className="footer-bottom pb-8 pt-9 sm:py-10 md:py-12 lg:py-14 xl:py-16 bg-[#F1EAE2] px-4 sm:px-5 md:px-8 lg:px-10 xl:px-10 z-20"
             >
                 <div className="max-w-[1600px] w-full mx-auto flex flex-col sm:flex-row justify-between items-center gap-7 md:gap-8 lg:gap-10 xl:gap-12">
                     <div className="w-[130px] sm:w-[140px] md:w-[150px] lg:w-[160px] xl:w-[170px]">
@@ -154,7 +154,7 @@ const Footer = () => {
                         <NavLink to="/global-press/">Global Press</NavLink>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 };

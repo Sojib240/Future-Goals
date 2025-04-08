@@ -7,38 +7,45 @@ import FAQ from "./Pages/FAQ";
 import AboutSandals from "./Pages/AboutSandals";
 import AfcAbout from "./Pages/AfcAbout";
 import Contact from "./Pages/Contact";
-import { Route, Routes } from "react-router-dom";
-import Home from "./Pages/Home";
+import { Route, Routes, useLocation } from "react-router-dom";
 import NavBar from "./Components/Common/NavBar";
 import About from "./Pages/About";
 import SchoolPortal from "./Pages/SchoolPortal";
 import News from "./Pages/News";
-import Noise from "./Components/Common/Noise";
-import ScrollToTop from "./Components/Common/ScrollToTop";
+import Noise from "./Components/Noise";
+import ScrollToTop from "./Components/ScrollToTop";
 import NewsDetails from "./Pages/NewsDetails";
+import HomePage from "./Pages/HomePage";
+import { AnimatePresence } from "framer-motion";
 const App = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+    const location = useLocation();
+    
     return (
         <div className="relative">
             <div className="w-full h-screen fixed px-[18px] z-[9999999] pointer-events-none select-none">
                 <Noise />
             </div>
             <LenisSmoothScroll />
-            <NavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            <NavBar />
             <ScrollToTop />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about-sandals/" element={<AboutSandals />} />
-                <Route path="/afc-about/" element={<AfcAbout />} />
-                <Route path="/about/" element={<About />} />
-                <Route path="/school-portal/" element={<SchoolPortal />} />
-                <Route path="/global-press/" element={<GlobalPress />} />
-                <Route path="/faq/" element={<FAQ />} />
-                <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
-                <Route path="/contact/" element={<Contact />} />
-                <Route path="/news/" element={<News />} />
-                <Route path="/news/:slug" element={<NewsDetails />} />
-            </Routes>
+            <AnimatePresence mode="wait">
+                <Routes location={location} key={location.pathname}>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/about-sandals/" element={<AboutSandals />} />
+                    <Route path="/afc-about/" element={<AfcAbout />} />
+                    <Route path="/about/" element={<About />} />
+                    <Route path="/school-portal/" element={<SchoolPortal />} />
+                    <Route path="/global-press/" element={<GlobalPress />} />
+                    <Route path="/faq/" element={<FAQ />} />
+                    <Route
+                        path="/privacy-policy/"
+                        element={<PrivacyPolicy />}
+                    />
+                    <Route path="/contact/" element={<Contact />} />
+                    <Route path="/news/" element={<News />} />
+                    <Route path="/news/:slug/" element={<NewsDetails />} />
+                </Routes>
+            </AnimatePresence>
             <Footer />
         </div>
     );
